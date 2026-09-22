@@ -1,0 +1,31 @@
+{
+  "name": "@lilitoweiwei/dsh-web-pwa",
+  "version": "0.1.0",
+  "description": "Install metadata for an installed DSH Web app: serves a Web App Manifest with raster icons and taps index.html so the browser fetches that manifest with credentials. Exists because Chrome parses an SVG-only manifest icon as 0x0 (not installable) and fetches manifests with credentials omitted (a reverse proxy in front of DSH answers the login page instead).",
+  "type": "module",
+  "main": "./src/index.js",
+  "exports": {
+    ".": "./src/index.js",
+    "./invariant": "./src/invariant.js",
+    "./src/*": "./src/*",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "src",
+    "test",
+    "README.md"
+  ],
+  "license": "MIT",
+  "peerDependencies": {
+    "@deepseek-ai/dsh-host-webserver": "^0.1.0"
+  },
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "pwa",
+    "web-app-manifest",
+    "webapk",
+    "reverse-proxy"
+  ]
+}
